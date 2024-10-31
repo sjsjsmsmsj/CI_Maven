@@ -15,7 +15,7 @@ public class MathUtilTest {
                 {1, 1},
                 {2, 2},
                 {3, 6},
-                {4, 14}
+                {4, 24}
         };
     }
     
