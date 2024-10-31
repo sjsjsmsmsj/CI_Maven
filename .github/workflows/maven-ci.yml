@@ -32,8 +32,9 @@ jobs: # Những công việc dev làm thường ngày: lấy code, build, chạy
       - name: Build project with Maven
         run: mvn -B package --file mathutil-junit5/pom.xml # Quá trình build sẽ cần đến file cấu hình pom.xml
       
-      - name: Distribute jar-war file # Gửi file .jar .war đi đâu, CD nhảy vào ...
-        run: mkdir staging && cp target/*.jar staging # tạo thư mục staging chứa file .jar .war sau khi build      
+      - name: Distribute jar file
+        run: mkdir staging && cp mathutil-junit5/target/*.jar staging # tạo thư mục staging chứa file .jar sau khi build
+
      
       - name: Make hyperlink to jar-war file # Tạo hyperlink để download build 
         uses: actions/upload-artifact@v3
